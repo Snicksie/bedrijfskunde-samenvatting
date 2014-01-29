@@ -1,0 +1,33 @@
+\documentclass[../../samenvatting.tex]{subfiles}
+\begin{document}
+
+\section{Economisch model}
+\subsection{Inleiding}
+Operationeel onderzoek helpt om te bepalen welke producten uit het assortiment bijdragen tot bedrijfswinst. Dit maakt gebruik van het economisch model.
+
+\subsection{Economisch model}
+\begin{equate}
+    Max\ bedrijfsResultaat = \sum_{i=1}^{n} q_i \cdot (v_i - k_i) - vaste\ Kosten\\
+    q_i = hoeveelheid\ product\ i \\
+    v_i = verkoopprijs\ product\ i \\
+    k_i = evenredige\ kosten\ product\ i \\
+    n = aantal\ producten
+\end{equate}
+
+Het bedrijfsresultaat wordt beperkt door de technische beperkingen van capaciteit en commerciële beperkingen (maximaal voorziene verkoop van product i).
+
+In operationeel onderzoek worden de beperkingen met het economisch model tot een Lineair Programma gevormd, waar een verzameling $q_i$ uitkomt zodat het bedrijfsresultaat optimaal is. Aangezien een dergelijk probleem vaak omvangrijk is, wordt dit maar één keer in de zoveel tijd berekend.
+
+\subsection{Schaduwkost}
+De marginale toename/afname van het optimale bedrijfsresultaat bij verandering van capaciteit wordt \emph{schaduwkost} genoemd. Als er één extra arbeider bijkomt en de onderneming op maximum capaciteit is, zal de ondernemingswinst toenemen. Schaduwkost wordt gebruikt om te berekenen of een bepaalde verandering winst zal opleveren.
+
+\subsection{Transferprijs}
+De transferprijs wordt gebruikt om de prestatie van afdelingen die een halfproduct aanleveren te kunnen beoordelen. De transferprijs is de som van alle meerkosten en schaduwkosten van een bepaalde afdeling.
+
+De transferprijs kan ook gebruikt worden om te bepalen of een product zelf gemaakt moet worden of moet uitbesteed worden (toeleveren of uitbesteden / make or buy), hoeveel marketingkosten er gemaakt kunnen worden en onderhoudskosten (hoeveel geld mag men uitgeven om 1 uur panne te besparen?).
+
+\subsection{Knelpuntcalculatie}
+Ieder bedrijf heeft een stel beperkingen, waarvan er een aantal dwingerder zijn en dus knelpunten/\emph{bottlenecks} zijn. Deze knelpunten zijn bijvoorbeeld machine-uren, arbeidsuren, zeldzame grondstoffen, ... Met de knelpuntcalculatie kan bepaald worden welk product de grootste marge per uur van de knelpuntcapaciteit heeft. Dit product is het meest rendabele product.
+
+Indien er geen rekening gehouden wordt met knelpuntcapaciteit, wordt de marge vergroot door structureel niet-rendabele producten te verkopen die boven de evenredige kost liggen of door alle bestellingen met positieve marge bij laagconjunctuur aan te nemen. 
+\end{document}

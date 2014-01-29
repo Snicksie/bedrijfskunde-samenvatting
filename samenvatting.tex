@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt,fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[dutch]{babel}
+
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{subcaption}
+
+\usepackage{chngcntr}
+\counterwithout{equation}{chapter}
+
+\usepackage{subfiles}
+\usepackage{forloop}
+\usepackage{environ}
+\usepackage{etoolbox}
+\newcounter{retained}\setcounter{retained}{0}
+\newcounter{shown}\setcounter{shown}{0}
+\newcounter{saveequation}
+\newcommand\recalleqn{%
+  \addtocounter{shown}{1}%
+  \setcounter{saveequation}{\value{equation}}%
+  \setcounter{equation}{\csname defeqnum\roman{shown}\endcsname}%
+  \csname defeq\roman{shown}\endcsname%
+  \setcounter{equation}{\value{saveequation}}%
+}
+\NewEnviron{equate}{%
+  \addtocounter{retained}{1}%
+  \expandafter\xdef\csname defeqnum\roman{retained}\endcsname{%
+                                                 \arabic{equation}}%
+  \expandafter\xdef\csname defeq\roman{retained}\endcsname{%
+    \noexpand\begin{equation}%
+    \noexpand\begin{split}%
+      \expandonce\BODY%
+    \noexpand\end{split}%
+    \noexpand\end{equation}}%
+  \csname defeq\roman{retained}\endcsname%
+}%
+\newcounter{equations}
+\newcommand{\listequations}{\forloop{equations}%
+                                    {0}%
+                                    {\value{equations} < \value{retained}}%
+                                    {\recalleqn}}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[]{mathastext}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+\titleformat{\section}
+  {\Large\bfseries}{ \thesection )}{1em}{}
+\titleformat{\subsection}
+  {\bfseries}{\thesubsection}{1em}{\MakeUppercase}
+
+\renewcommand{\title}{Samenvatting\\ \huge\ Beginselen van de Bedrijfskunde}
+\renewcommand{\author}{
+\textbf{Neline\ van\ Ginkel} \\
+\small $1^{e}$ Master\ Computerwetenschappen \\
+\bigskip
+
+\small\ Bedrijfskunde \\
+}
+
+\renewcommand{\maketitle}{
+\thispagestyle{empty}
+\begin{flushright}
+\author
+\bigskip
+\textbf{\today}
+\end{flushright}
+\vspace{5em}
+\begin{center}
+\Huge{\title}
+\end{center}}
+
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+\newpage
+\chapter{Beginselen van de Bedrijfskunde}
+
+\subfile{books/beginselen/inleiding.tex}
+\subfile{books/beginselen/productlevenscyclus.tex}
+\subfile{books/beginselen/algemene-boekhouding.tex}
+\subfile{books/beginselen/financiele-analyse.tex}
+\subfile{books/beginselen/kostprijssystemen.tex}
+\subfile{books/beginselen/economisch-model.tex}
+\subfile{books/beginselen/budgettering-en-kasplanning.tex}
+\subfile{books/beginselen/investeringsanalyse.tex}
+
+\chapter{Technische Bedrijfsvoering en Organisatie}
+
+\subfile{books/tbo/logistiek-beheer.tex}
+\subfile{books/tbo/voorraadbeheer.tex}
+
+
+
+\chapter{Extra}
+
+\listequations
+
+\end{document}

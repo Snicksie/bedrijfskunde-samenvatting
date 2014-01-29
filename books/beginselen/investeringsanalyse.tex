@@ -1,0 +1,84 @@
+\documentclass[../../samenvatting.tex]{subfiles}
+\begin{document}
+
+\section{Investeringsanalyse}
+
+\subsection{Probleemstelling}
+Investeringsbeslissingen hebben onomkeerbare gevolgen voor de toekomstige rentabiliteit van een onderneming. Hier moeten dus strategische beslissingen voor worden gemaakt, die in lijn staan met de politiek van een bedrijf. Er moet hier rekening mee gehouden worden met de technische kant en de economische kant.
+
+\subsection{De kern van het probleem}
+Een investering is een operatie waarbij men zich verbindt tot een reeks uitgaven waarvan men hoopt dat ze aanleiding geeft tot een reeks inkomsten. Er zijn vier soorten investeringsproblemen:
+\begin{itemize}
+    \item Vervangingsprobleem: vervanging door een identieke uitrusting, omdat de bestaande fysiek verouderd is.
+    \item Moderniseringsprobleem: de huidige uitrustging is economisch verouderd, een nieuwe zou productiekosten verlagen.
+    \item Expansieprobleem: uitbreiding van bestaande productie of opstart van nieuwe productie.
+    \item Strategisch probleem: om mee te doen aan een project moet een bedrijf specifieke uitrusting hebben. De rentabiliteit is ondergeschikt aan de verwachtingen binnen het project.
+\end{itemize}
+
+\subsection{De basisgegevens}
+
+Om beslissingen te kunnen beoordelen, moet er een horizon vastgelegd worden hoever men in de toekomst wil kijken. Meestal beperkt men zich tot de fysische levensduur, economische levensduur, productlevensduur of de fiscale levensduur.
+
+Investeringen hebben een uitgavenpatroon, waar dingen als aankoopprijs, taksen, transportkosten, instalatiekosten enzovoort onder vallen.
+
+Investeringen hebben als doel inkomsten, dus een inkomstenpatroon. Dit is meestal lastig te voorspellen.
+
+Met behulp van deze gegevens kan men de kasstroom bepalen en dus bepalen of een bepaalde investering winst oplevert. Een belangrijk onderdeel hiervan is het belastingvoordeel.
+
+\subsection{Financiële evaluatie} 
+Bij het opstellen van het uitgaven- en inkomstenpatroon moeten alle elementen in financiële termen worden omgezet. Alle inkomsten en uitgaven gebeuren op een verschillend tijdstip en moeten vergeleken kunnen worden. Dit gebeurt door de techniek der actualisatie.
+
+Bij de evaluatie moet kritisch gekeken worden tegenover de gegevens van de boekhouding, aangezien hier soms de kostenvermindering voor een afdeling niet volledig duidelijk is weergegeven.
+
+\subsection{Samengestelde interesten, acutalisatie en annuïteiten}
+Samengestelde interesten houdt in dat de verworven interesten toegevoegd worden op het kapitaal om extra interest op te brengen.
+
+\begin{equate}
+    Finale kapitaal = beginkaPitaal * (1 + Interestvoet)^n
+\end{equate}
+
+Actualisatie is het bepalen van de waarde van een kapitaal op het einde van een bepaalde periode, rekening gehouden met een bepaalde rentevoet. 
+
+\begin{equate}
+    P = \frac{F}{(1+i)^n}
+\end{equate}
+
+Als men meerdere bedragen moet actualiseren, zal het totaal gelijk zijn aan:
+
+\begin{equate}
+    P = \sum_{k=1}^{n}\frac{A_k}{(1+i)^k}
+\end{equate}
+
+Als alle $A_k$ gelijk zijn, dan zal deze formule gereduceerd worden tot:
+\begin{equate}
+    P = A \cdot \left[\frac{(1+i)^n - 1}{i \cdot (1+i)^n}\right] = A \cdot a_{n,i}
+\end{equate}
+
+De factor $a_{n,i}$ is de huidige waarde van een annuïteit van 1 euro.
+
+\subsection{Enkele beoordelingscriteria van investeringen}
+Om investeringen te beoordelen zijn er diverse criteria, onderverdeeld in selectiecriteria (is een voorstel interessant genoeg om geselecteerd te kunnen worden) en classificatiecriteria (welke prioriteit moeten de geselecteerde voorstellen gekozen worden)
+
+De pay-back periode (terugbetalingstermijn) is de tijd die nodig is om de uitgaven te recupereren (het moment waarop uitgaven en inkomsten gelijk zijn). Een project wordt geselecteerd als de periode kort genoeg is en de classificatie is op basis van periode-lengte (korter is beter).
+
+Met de discounted cashflow (netto huidige waarde) wordt rekening gehouden met de tijdwaarde van het geld. Een project wordt geselecteerd als de netto huidige waarde $>0$ is en wordt geclassificeerd op hoogste netto huidige waarde. $R_k$ = jaarlijkse inkomsten, $E_k$ = jaarlijkse uitgaven, $I_0$ = investeringsbedrag op tijdstip 0.
+
+\begin{equate}
+    Netto\ Huidige\ Waarde = \sum_{k=1}^{n}\frac{R_k - E_k}{(1+i)^k} - I_0
+\end{equate}
+
+De profitability index houdt rekening met de omvang van het budget. Een project wordt geselecteerd als het project meer inkomsten oplevert dan verlies en wordt geclassificeerd op grootste benefit-cost-ratio.
+
+\begin{equate}
+    PI_1 = \frac{HW}{I_0} (\geq 1) ; PI_2 = \frac{NHW}{I_0} = PI_1 - 1 (\geq 0)
+\end{equate}
+
+De internal rate of return (inwendige rendementsgraad) is de actualisatievoet die de NHW 0 maakt. Een project wordt aanvaard als de rentevoet groter is dan een vastgelegd minimum en wordt geclassificeerd op grootste rentevoet. Het vastleggen van een minimumrentevoet is niet altijd een eenvoudige taak, aangezien hier niet alleen op basis van de huidige markt moet worden gewerkt, maar ook van de financiële structuur van het bedrijf zelf.
+
+\addtocounter{subsection}{1}
+\subsection{De factor 'risico'}
+Risico is moeilijk te meten. Door drie onafhankelijke deterministische investeringsberekeningen te maken die optimistisch, neutraal en pessimistisch zijn, kan dit een idee geven van het risico. Met behulp van sensitiviteitsanalyses kan het risico bepaald worden.
+
+\subsection{Besluit}
+Investeringsbeslissingen hebben soms grote gevolgen en moeten dus grondig genomen worden. Ze moeten ook gezien worden in een bredere context, met andere factoren.
+\end{document}

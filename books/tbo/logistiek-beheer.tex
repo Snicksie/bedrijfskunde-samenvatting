@@ -1,0 +1,48 @@
+\documentclass[../../samenvatting.tex]{subfiles}
+\begin{document}
+
+\section{Logistiek beheer}
+\subsection{Inleiding}
+Logistiek wordt telkens belangrijker binnen bedrijven.
+
+\subsection{Logistiek}
+Logistiek zorgt voor een gecoördineerd beheer van de goederenstromen en corresponderende informatiestromen naar, in en van het bedrijf. 
+
+Het logistiek systeem houdt zich bezig met zaken als lokalisatie van bedrijfsvestigingen, magazijnen, transport en distributie, voorraadbeheer, materiaalbehandeling en organisatie van communicatie/informatieoverdracht.
+
+Logistiek wordt meer en meer belangrijk, onder andere vanwege de verkorte PLC, de afname van de toegevoegde waarde, veeleisendheid van klanten en het competitieve voordeel van levertermijnen.
+
+\subsection{De componenten van een logistiek systeem}
+Verschillende componenten van een logistiek systeem hebben invloed op elkaar.
+
+Een belangrijke component van het logistiek systeem is de lokalisatie. De vestigingsplaats van een bedrijf wordt gekozen na ruime studie van nabijheid van grondstoffen, aanwezigheid van de markt, infrastructuur, arbeidskrachten, maatschappelijke context enzovoorts. Hierna kunnen de depots worden gevestigd, in functie van een goed distributienet. Hierbij moet rekening worden gehouden met onder andere de volgende zaken:
+\begin{itemize}
+     \item Depotkosten: exploitatiekosten en andere kosten, meestal zijn minder depots(maar grotere) beter (economy of scale). Voorraadkosten zullen lager zijn voor minder depots met een zelfde servicegraad (percentage voldane vraag)
+     \item transportkosten: depots openen in gebieden met grote vraag is interessant. Depots moeten bereikbaar zijn. Meer depots zorgt voor minder transportkosten naar de klant (een depot is korterbij) maar zorgt voor meer transportkosten vanuit de fabriek.
+     \item strategische beslissingen: door een depot te openen in een gebied met weinig klanten, kan er een markt opgebouwd worden in dat gebied.
+     \item praktische beperkingen: er moet een industriële stockageruimte zijn in het gebied, evenals geschikt personeel.
+ \end{itemize}
+
+Ook de distributiekanalen moeten gekozen worden in functie van de producten, klanten, kosten van alternatieven, commercieel-strategische overwegingen (klantenservice, bedrijfsimago), externe beperkingen, historische groei enzovoorts. Hier moet onder andere rekening gehouden worden met de volgende vragen:
+\begin{itemize}
+    \item Worden klanten uit de fabriek of depots beleverd?
+    \item Worden depots zelf beheerd of uitbesteed?
+    \item Hoe worden depotbeheerders betaald ($a\cdot x+y$, $a\cdot x$, ...)?
+\end{itemize}
+
+Het transportmedium moet ook gekozen worden (trein, over de weg, schip, vliegtuig), maar meestal zal er altijd transport over de weg zijn. Hierbij moet gekeken worden of het transport in eigen beheer is of uitbesteed, hoeveel vrachtwagens er nodig zijn en hoe groot, hoeveel chauffeurs er nodig zijn (overuren kosten extra), wat de optimale routes zijn (TSP!).
+
+Material Handling houdt zich bezig met de verplaatsing van goederen. Hier kan gekozen worden voor automatisatie (kostenbesparing bij loonkosten), beperking van transport (efficiënter en kost minder) en gestandaardiseerd materieel.
+
+Packaging houdt zich bezig met de verpakking, in functie van de Material Handling. Hier wordt onder andere rekening gehouden met de kosten van alternatieve verpakkingsmaterialen, bescherming van producten/omgeving, grootte van een verkoopseenheid, eenvoudigheid van opslag (pallet is makkelijker, vorm), vereenvoudiging van voorraadcontroles, ...
+
+Voorraadbeheer zorgt voor het minimaliseren van voorraadinvesteringen, het maximaliseren van de klantenservice en een efficiënte werking van productie. 
+
+Het orderpenetratiepunt is het punt in het productieproces waar klantenspecificaties bepalend worden voor het verder afwerken van het product. Bij een betere service zal dit punt verder naar achter liggen (snel kunnen leveren), bij een grotere complexiteit zal dit punt naar voren geschoven worden.
+
+Een bedrijfscommunicatie/informatiesysteem is bedoeld om de werking, planning en beslissingsprocessen te verbeteren.
+
+Bij een multi-echelon distributiesysteem wordt de vraag op een bepaald niveau bepaald door het vraagpatroon op het volgende niveau dichter bij de klant. Het probleem hierbij is dat de orders op een hoog niveau groter en minder frequent zijn. Hierdoor zal er een mindere service zijn, kleine verschuivingen onderaan de hierarchie zullen grote schommelingen teweeg brengen naar boven. Ook is er hierbij onafhankelijk stockbeheer, zodat beide een grotere veiligheidsstock moeten inbouwen, wat extra kosten oplevert.
+
+Bij een base stock systeem beschikt ieder niveau over de vraag naar het eindproduct, waardoor de veiligheidsstock lager kan zijn en er minder grotere schommelingen zijn (omdat er meer informatie beschikbaar is).
+\end{document}
